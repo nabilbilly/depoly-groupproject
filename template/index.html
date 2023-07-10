@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Group Generation</title>
+    <link rel="stylesheet"  href='{% static '/style.css'%}'>
+
+</head>
+<body>
+    <h1>Group Generation</h1>
+    <label for="number-groups">Enter the number of groups:</label>
+    <br> 
+    <input type="number" id="number-groups" placeholder="@5 Group" required><br><br>
+
+    <label for="num-group-members">Enter the number of group members:</label>
+    <br><br> 
+    <input type="number" id="num-group-members" placeholder="@10 members" required><br><br>
+
+    <button onclick="generateGroups()">Enter Group List</button>
+
+    <h2>Groups:</h2>
+    <div id="groups-output"></div>
+    <script type="text/javascript" src="{% static "/script.js"%}" ></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} <form method="post">
+    {% csrf_token %}
+
+    <label for="number_groups">Enter the number of groups:</label>
+    <input type="number" name="number_groups" required><br><br>
+
+    <label for="num_gp_members">Enter the number of group members:</label>
+    <input type="number" name="num_gp_members" required><br><br>
+
+    {% for i in range(0,4)  %}
+        <label for="member{{ i }}">Enter member {{ i }} fullname:</label>
+        <input type="text" name="member{{ i }}" required><br><br>
+    {% endfor %}
+
+    <input type="submit" value="Generate Groups">
+</form> {% endcomment %}
+

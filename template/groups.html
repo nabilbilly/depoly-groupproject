@@ -1,0 +1,18 @@
+
+
+<h3>Groups:</h3>
+{% for i, group in org_group %}
+    <h4>Group {{ i }}:</h4>
+    <ul>
+        {% for member in group %}
+            <li>{{ member }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+
+<h3>Remaining members:</h3>
+<ul>
+    {% for member in remaining_members %}
+        <li>{{ member }}</li>
+    {% endfor %}
+</ul>
